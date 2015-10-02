@@ -1,0 +1,20 @@
+<div>
+  <h1>Multi Selection Demos</h1>
+  <h3>Array of strings</h3>
+  <ui-select multiple ng-model="multipleDemo.colors" theme="bootstrap" ng-disabled="disabled" close-on-select="true" style="width: 300px;" title="Choose a color">
+    <ui-select-match placeholder="Select colors...">{{$item}}</ui-select-match>
+    <ui-select-choices repeat="color in availableColors | filter:$select.search">
+      {{color}}
+    </ui-select-choices>
+  </ui-select>
+  <p>Selected: {{multipleDemo.colors}}</p>
+
+    <ui-select ng-model="singleDemo.color" theme="bootstrap" ng-disabled="disabled" close-on-select="true" style="width: 300px;" title="Choose a color">
+    <ui-select-match placeholder="Select colors...">{{singleDemo.color}}</ui-select-match>
+    <ui-select-choices repeat="color in availableColors | filter:$select.search">
+      {{color}}
+    </ui-select-choices>
+  </ui-select>
+  <p>Selected: {{singleDemo.color}}</p>
+  <hr>
+</div>
